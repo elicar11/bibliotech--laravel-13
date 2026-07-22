@@ -34,8 +34,8 @@
                     <li><a href="#how" class="nav__link">À propos</a></li>
                     <li><a href="#contact" class="nav__link">Contact</a></li>
                     <!-- Boutons visibles uniquement en mobile dans le menu -->
-                    <li class="nav__item-mobile"><a href="#" class="btn btn--outline">Connexion</a></li>
-                    <li class="nav__item-mobile"><a href="#" class="btn btn--green">S'inscrire</a></li>
+                    <li class="nav__item-mobile"><a href="{{ route('login')    }}" class="btn btn--outline">Connexion</a></li>
+                    <li class="nav__item-mobile"><a href="{{ route('register') }}" class="btn btn--green">S'inscrire</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
             </div>
@@ -47,8 +47,8 @@
                 </div>
 
                 <div class="nav__auth">
-                    <a href="#" class="nav__link-auth">Connexion</a>
-                    <a href="#" class="btn btn--green">S'inscrire</a>
+                    <a href="{{ route('login')    }}" class="nav__link-auth">Connexion</a>
+                    <a href="{{ route('register') }}" class="btn btn--green">S'inscrire</a>
                 </div>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -68,7 +68,7 @@
                         Une solution simple, rapide et moderne pour gérer vos livres, vos emprunts et vos lecteurs en quelques clics.
                     </p>
                     <div class="hero__btns">
-                        <a href="#" class="btn btn--green btn--lg">Commencer</a>
+                        <a href="{{ route('login') }}" class="btn btn--green btn--lg">Commencer</a>
                         <a href="#" class="btn btn--outline btn--lg">Découvrir</a>
                     </div>
                 </div>
