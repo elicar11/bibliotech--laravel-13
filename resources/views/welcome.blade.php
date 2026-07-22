@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+
 </head>
 <body>
 
@@ -290,6 +291,6 @@
     <a href="#" class="scrollup" id="scroll-up"><i class="fas fa-arrow-up"></i></a>
     <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
-    <script src="script.js"></script>
+    <script src="{{ asset('js/welcome.js') }}"></script>
 </body>
 </html>
