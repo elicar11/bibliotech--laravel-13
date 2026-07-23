@@ -22,20 +22,37 @@
 
             <div class="auth-form-wrapper">
 
-                <form action="#" class="auth-form">
+                <form action="/inscription_traitement" class="auth-form" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="name">NOM COMPLET</label>
-                        <input type="text" id="name" placeholder="Ex: Jean Dupont" required>
+                        <input type="text" id="name" placeholder="RAKOTO Nomena" name="name" value="{{old('name')}}" required>
+                        @error('name')
+                        <span style="color: #ff4d4d; margin-bottom: 8px; text-align: center; font-size: 0.9rem;">{{$message}}</span>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" placeholder="votre@email.com" required>
+                        <input type="email" id="email" placeholder="votre@email.com" name="email" value="{{old('email')}}" required>
+                        @error('email')
+                        <span style="color: #ff4d4d; margin-bottom: 8px; text-align: center; font-size: 0.9rem;">{{$message}}</span>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="password">CRÉER UN MOT DE PASSE</label>
-                        <input type="password" id="password" placeholder="8 caractères min." required>
+                        <input type="password" id="password" placeholder="8 caractères min." name="password" required>
+                        @error('password')
+                        <span style="color: #ff4d4d; margin-bottom: 8px; text-align: center; font-size: 0.9rem;">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="password">CONFIRMER VOTRE MOT DE PASSE</label>
+                        <input type="password" id="password" placeholder="8 caractères min." name="password_confirmation" required>
+                        @error('password')
+                        <span style="color: #ff4d4d; margin-bottom: 8px; text-align: center; font-size: 0.9rem;">{{$message}}</span>
+                        @enderror
                     </div>
 
                     <div class="terms">

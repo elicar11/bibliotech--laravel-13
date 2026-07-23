@@ -250,7 +250,7 @@
                 <div class="cta__box">
                     <h2>Prêt à moderniser votre bibliothèque ?</h2>
                     <div class="cta__btns">
-                        <a href="#" class="btn btn--white">Créer un compte</a>
+                        <a href="{{ route('register') }}" class="btn btn--white">Créer un compte</a>
                         <a href="#" class="btn btn--outline-white">Découvrir</a>
                     </div>
                 </div>

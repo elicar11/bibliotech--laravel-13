@@ -22,15 +22,29 @@
 
             <div class="auth-form-wrapper">
 
-                <form action="#" class="auth-form">
+                <form action="/connexion_traitement" class="auth-form" method="POST" >
+                    @csrf
+                    @if (session('status'))
+                    <div style="color: #ff4d4d; margin-bottom: 15px; text-align: center; font-size: 0.9rem;">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div style="color: #ff4d4d; margin-bottom: 15px; text-align: left; font-size: 0.9rem;">
+                            @foreach ($errors->all() as $error)
+                                <p><i class="fas fa-exclamation-circle"></i> {{ $error }}</p>
+                            @endforeach
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" placeholder="Entrez votre email" required>
+                        <input type="email" id="email" placeholder="Entrez votre email" name="email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="password">MOT DE PASSE</label>
-                        <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+                        <input type="password" id="password" placeholder="Entrez votre mot de passe" name="password" required>
                         <a href="#" class="forgot-link">Mot de passe oublié ?</a>
                     </div>
 
